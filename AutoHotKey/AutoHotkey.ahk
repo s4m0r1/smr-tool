@@ -389,4 +389,14 @@ SetBrightness(value){
 ;キーボードで明るさの変更
 LAlt & F1::SetBrightness(Round(GetBrightness()-10, -1))
 LAlt & F2::SetBrightness(Round(GetBrightness()+10, -1))
+
+Tab & q::SoundPlay, C:\Users\n1270253\Documents\SE\dededon.wav
+Tab & w::SoundPlay, C:\Users\n1270253\Documents\SE\gugi.wav
+Tab & e::SoundPlay, C:\Users\n1270253\Documents\SE\newtype.mp3
+Tab & r::SoundPlay, C:\Users\n1270253\Documents\SE\DrakueLvup.wav
+Tab & t::SoundPlay, C:\Users\n1270253\Documents\SE\arumage.wav
+Tab & y::SoundPlay, C:\Users\n1270253\Documents\SE\neruneruneune.mp3
+Tab & u::SoundPlay, C:\Users\n1270253\Documents\SE\gomadare.wav
+Tab & i::SoundPlay, C:\Users\n1270253\Documents\SE\ieaaaaaaaaaa.wav
+Tab & o::SoundPlay, C:\Users\n1270253\Documents\SE\metometometo.wav
 ;ここまで↑
