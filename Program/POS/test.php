@@ -5,6 +5,6 @@
     <title>aaaa</title>
   </head>
   <body>
-    <p>GERI@</p>
+    <p>GERI</p>
   </body>
 </html>
