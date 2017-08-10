@@ -400,6 +400,6 @@ Tab & u::SoundPlay, C:\Users\n1270253\Documents\SE\gomadare.wav
 Tab & i::SoundPlay, C:\Users\n1270253\Documents\SE\ieaaaaaaaaaa.wav
 Tab & o::SoundPlay, C:\Users\n1270253\Documents\SE\metometometo.wav
 Tab & p::SoundPlay, C:\Users\n1270253\Documents\SE\mituketazelda.mp3
-
+Tab & space::SoundPlay, C:\Users\n1270253\Documents\SE\muon.wav
 ~Tab::return
 ;ここまで↑
