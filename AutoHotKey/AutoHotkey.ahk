@@ -6,6 +6,8 @@ Return
 ;無変換+F5でAutoHotkeyをReload
 vk1Dsc07B & F5::Reload
 
+;無変換+Qでブラウザタブ左
+
 ;変換がEnter
 vk1Csc079::Enter
 
@@ -208,26 +210,6 @@ Else
 	WinMaximize, A
 Return
 
-;無変換+qでウインドウを最小化
-vk1Dsc07B & q::WinMinimize , A
-
-;無変換+sでWindows+Tab
-vk1Dsc07B & s::Send,#{Tab}
-
-;無変換+dでWindows+d
-vk1Dsc07B & d::Send,#{d}
-
-;無変換+eでWindows+e
-vk1Dsc07B & e::Send,#{e}
-
-;無変換+tでタブ移動
-vk1Dsc07B & t::
-If GetKeyState("shift", "P"){
-	Send,^+{Tab}
-}else{
-	Send,^{Tab}
-}
-return
 
 ;無変換+矢印でWindows+矢印
 vk1Dsc07B & Up::Send,{Blind}#{Up}
