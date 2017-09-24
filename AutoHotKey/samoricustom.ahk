@@ -35,7 +35,6 @@ vk1Dsc07B & q::send,{Blind}{XButton1}
 ;無変換+eでマウス拡張ボタン2
 vk1Dsc07B & e::send,{Blind}{XButton2}
 
-
 ;-----------------メディア系----------------
 ;無変換＋ｚｘで音量上げ下げｃでミュート
 vk1Dsc07B & z::Send,{Blind}{Volume_Down}
