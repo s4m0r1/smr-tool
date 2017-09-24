@@ -14,11 +14,27 @@ vk1Dsc07B & j::Send,{Blind}{Down}
 vk1Dsc07B & k::Send,{Blind}{Up}
 vk1Dsc07B & l::Send,{Blind}{Right}
 
-;1行選択
+;無変換＋NでHome.でEnd
+vk1Dsc07B & n::Send,{Blind}{Home}
+vk1Dsc07B & .::Send,{Blind}{End}
 
+;無変換+mでスクロールアップで,スクロールダウン
+vk1Dsc07B & m::Send,{Blind}{WheelDown}
+vk1Dsc07B & ,::Send,{Blind}{WheelUp}
+
+;Ctrl+無変換+mで左にチルト,で右にチルト
+LCtrl & vk1Dsc07B & m::Send,{Blind}{WheelLeft}
+LCtrl & vk1Dsc07B & ,::Send,{Blind}{WheelRight}
 
 ;無変換＋Fで左クリック
 vk1Dsc07B & f::send,{Blind}{LButton}
+
+;無変換+qでマウス拡張ボタン１
+vk1Dsc07B & q::send,{Blind}{XButton1}
+
+;無変換+eでマウス拡張ボタン2
+vk1Dsc07B & e::send,{Blind}{XButton2}
+
 
 ;-----------------メディア系----------------
 ;無変換＋ｚｘで音量上げ下げｃでミュート
@@ -28,34 +44,5 @@ vk1Dsc07B & c::Send,{Blind}{Volume_Mute}
 
 ;無変換+ASDで曲の再生や次の曲へ移動
 vk1Dsc07B & a::Send,{Blind}{Media_Prev}
-vk1Dsc07B & d::Send,{Blind}{Media_Next}
+vk1Dsc07B & d::Send,{Blind}{Media_Next}s
 vk1Dsc07B & s::Send,{Blind}{Media_Play_Pause}
-
-;-----------------TestDebug----------------
-vk1Dsc07B & q::
-	; 退避
-	clipboard_backup = %ClipboardAll%
-
-	; 先頭まで選択
-	Send +{Home}
-
-	; 選択範囲を読み取る
-	Clipboard :=
-	Send ^c
-	ClipWait, 1
-	selected := Clipboard
-
-	; クリップボードの内容を復元
-	Clipboard := clipboard_backup
-
-	; 先頭の一文字を取り出す
-	c := SubStr(selected, 1, 1)
-
-	; インデント文字かどうかで分岐
-	If (c = " " || c = "`t") {
-		Send ^+{Right} ; 単語単位の移動を利用して移動
-	}
-
-	; 選択を解除
-	Send {Left}
-	Return
