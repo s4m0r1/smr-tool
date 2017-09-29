@@ -1,12 +1,10 @@
-#!bin/bash
-clear
-echo #######################
-echo ###installer#ver0.01###
-echo #######################
-echo ###s4m0r1.github.io####
-echo #######################
+
+echo Zshellインスコするよ
+'ここでいろいろ聞く'
+'Centならyumでの設定Ubuntuならaptでの設定'
+'' 
 echo
-echo
+sleep 5
 clear
 echo file setting ...
 sleep 2
