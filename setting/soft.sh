@@ -1,0 +1,1 @@
+wget http://jp.softether-download.com/files/softether/v4.22-9634-beta-2016.11.27-tree/Linux/SoftEther_VPN_Client/32bit_-_Intel_x86/softether-vpnclient-v4.22-9634-beta-2016.11.27-linux-x86-32bit.tar.gz
