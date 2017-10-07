@@ -1,26 +1,16 @@
-let s:dein_dir = expand('~/.vim/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+# 以下を追記
+set nocompatible
+filetype plugin indent off
 
-if &compatible
-  set nocompatible
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle'))
 endif
 
-if !isdirectory(s:dein_repo_dir)
-  execute '!git clone git@github.com:Shougo/dein.vim.git' s:dein_repo_dir
-endif
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-execute 'set runtimepath^=' . s:dein_repo_dir
-
-call dein#begin(s:dein_dir)
-
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/neocomplete.vim')
-  :
-
-call dein#end()
-
-if dein#check_install()
-  call dein#install()
-endif
+# 以下は必要に応じて追加
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neosnippet.vim'
 
 filetype plugin indent on
