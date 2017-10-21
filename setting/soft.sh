@@ -1,1 +1,2 @@
-wget http://ftp.icm.edu.pl/packages/owncloud/owncloud-10.0.3.zip
+wget -nv https://download.owncloud.org/download/repositories/production/Ubuntu_16.04/Release.key -O Release.key
+apt-key add - < Release.key
