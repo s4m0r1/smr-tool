@@ -23,6 +23,7 @@ vk1Dsc07B & .::Send,{Blind}{End}
 ;無変換+SpaceでEsc
 vk1Dsc07B & Space::Send,{Esc}
 
+/*
 ;無変換+mでスクロールアップ ,でスクロールダウン
 ;Shift+無変換+mで左にチルト ,で右にチルト
 ;Ctrl+無変換+mで縮小 ,で拡大
@@ -40,12 +41,12 @@ vk1Dsc07B & ,::
 if GetKeyState("m", "P") {
 	Send,^{0}
 }else if GetKeyState("Shift", "P") {
-	Send,{Blind}{WheelRight}
+	Send,{Blind}{WheelRight}b
 } else {
 	Send,{Blind}{WheelUp}
 }
 return
-
+*/
 ;無変換+fで左クリック
 vk1Dsc07B & f::send,{Blind}{LButton}
 
