@@ -47,6 +47,7 @@ if GetKeyState("m", "P") {
 }
 return
 */
+
 ;無変換+fで左クリック
 vk1Dsc07B & f::send,{Blind}{LButton}
 
@@ -72,3 +73,9 @@ vk1Csc079::Enter
 
 ;カタカナ　ひらがなでBS
 vkF2sc070::BS
+
+;無変換変換で半角全角
+vk1Dsc07B & vk1Csc079::Send,{vkF3sc029}
+
+;無変換＋S
+vk1Dsc07B & 1::Send,s4m0r1
