@@ -80,4 +80,5 @@ vk1Dsc07B & vk1Csc079::Send,{vkF3sc029}
 ;無変換＋S
 vk1Dsc07B & 1::Send,s4m0r1
 
-;無変換
+;無変換+yでJQueryのソース打ち込み
+vk1Dsc07B & y::Send,<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
