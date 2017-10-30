@@ -67,5 +67,8 @@ vk1Dsc07B & a::Send,{Blind}{Media_Prev}
 vk1Dsc07B & d::Send,{Blind}{Media_Next}
 vk1Dsc07B & s::Send,{Blind}{Media_Play_Pause}
 
-;半角/全角切り替え
-vk1Csc079::vkF3sc029
+;変換をEnterに
+vk1Csc079::Enter
+
+;カタカナ　ひらがなでBS
+vkF2sc070::BS
