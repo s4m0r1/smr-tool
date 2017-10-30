@@ -79,3 +79,5 @@ vk1Dsc07B & vk1Csc079::Send,{vkF3sc029}
 
 ;無変換＋S
 vk1Dsc07B & 1::Send,s4m0r1
+
+;無変換
