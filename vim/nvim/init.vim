@@ -57,11 +57,8 @@ set number
 set title
 
 "縦と横強調
-"set cursorline
-"set cursorcolumn
-"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-
+set cursorline
+set cursorcolumn
 
 "ビープ音強調
 set visualbell
@@ -81,3 +78,6 @@ set tabstop=4
 "入力中のコマンドを表示する
 set showcmd
 
+"テスト
+set statusline=2
+set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim

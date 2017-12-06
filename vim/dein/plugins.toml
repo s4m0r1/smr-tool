@@ -16,4 +16,5 @@ hook_add = '''
   " 但し Colorscheme イベントの発生が抑制されないよう nented を付ける。
   au MyAutoCmd VimEnter * nested colorscheme jellybeans
 '''
-
+[[plugins]]
+repo = 'powerline/powerline'
