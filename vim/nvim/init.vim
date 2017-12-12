@@ -90,8 +90,6 @@ set statusline=2
 " UTF-8 環境でないとうまく表示されない
 set encoding=utf-8
 " `fancy' テーマに切り替え
-let g:Powerline_symbols = 'fancy'
-
-"Shotcat
-noremap <C-P> :Denite buffer<CR>
-noremap <C-Q> :q!<CR>
+"let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
+set laststatus=2
