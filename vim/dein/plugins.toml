@@ -17,4 +17,16 @@ hook_add = '''
   au MyAutoCmd VimEnter * nested colorscheme jellybeans
 '''
 [[plugins]]
-repo = 'bling/vim-airline'
+repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+hook_add = '''   
+set laststatus=2
+let g:airline_theme = 'deus'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#virtualenv#enabled = 1
+'''
+
+[[pkugins]]
+repo = 'vim-airline/vim-airline-themes'

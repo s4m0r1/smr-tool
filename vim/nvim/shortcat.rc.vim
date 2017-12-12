@@ -12,7 +12,6 @@ noremap <C-C> yy<CR>
 
 "Paste
 noremap <C-V> p<CR>
-:w
 
 "###############################################
 "NERDTree Shortcat
@@ -23,3 +22,7 @@ noremap <C-F> :NERDTree<CR>
 "###############################################
 "Denite Shortcat
 noremap <C-P> :Denite buffer<CR>
+
+
+
+

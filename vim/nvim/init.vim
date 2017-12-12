@@ -49,9 +49,10 @@ endif
 " }}}
 
 "vimrc
+"init.vim
 set runtimepath+=~/.config/nvim
 source /home/smr/git/smr/vim/nvim/keymap.rc.vim
-
+source /home/smr/git/smr/vim/nvim/shortcat.rc.vim
 
 
 "VIMの設定を記述
@@ -93,3 +94,6 @@ set encoding=utf-8
 "let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 set laststatus=2
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
