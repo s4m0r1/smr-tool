@@ -48,6 +48,12 @@ if has('vim_starting') && dein#check_install()
 endif
 " }}}
 
+"vimrc
+set runtimepath+=~/.config/nvim
+source /home/smr/git/smr/vim/nvim/keymap.rc.vim
+
+
+
 "VIMの設定を記述
 
 "行番号を設定
@@ -80,4 +86,12 @@ set showcmd
 
 "テスト
 set statusline=2
-set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" UTF-8 環境でないとうまく表示されない
+set encoding=utf-8
+" `fancy' テーマに切り替え
+let g:Powerline_symbols = 'fancy'
+
+"Shotcat
+noremap <C-P> :Denite buffer<CR>
+noremap <C-Q> :q!<CR>

@@ -17,4 +17,4 @@ hook_add = '''
   au MyAutoCmd VimEnter * nested colorscheme jellybeans
 '''
 [[plugins]]
-repo = 'powerline/powerline'
+repo = 'Lokaltog/vim-powerline'
