@@ -15,7 +15,7 @@ noremap <C-V> p<CR>
 
 "###############################################
 "NERDTree Shortcat
-
+"NERDTree Open
 noremap <C-F> :NERDTree<CR>
 
 
