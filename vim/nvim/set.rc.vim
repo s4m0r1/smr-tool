@@ -7,7 +7,7 @@ set title
 
 "cursorline
 set cursorline
-set cursorline
+set cursorcolumn
 
 "BEEP
 set visualbell
@@ -17,10 +17,6 @@ set nobackup
 
 "noswapfile
 set noswapfile
-
-cursorline
-set cursorline
-set cursorline
 
 "BEEP
 set visualbell
@@ -47,25 +43,12 @@ set encoding=utf-8
 "TEST
 set laststatus=2
 
+"{}()
+set showmatch
+
+"256color
+set t_Co=256
+
 "airline
 let g:airline_powerline_fonts = 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let g:airline_theme = 'luna'
