@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "`whoami`" != "root" ]; then
-  echo "Require root privilege"
+  echo "rootでこのスクリプトは動かしてください><"
   exit 1
 fi
 
