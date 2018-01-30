@@ -13,6 +13,7 @@ Blindをいれることにより装飾キーとの同時押しを有効にする
 vk1Dsc07B & F5::Reload
 ;ファイルの読み込み
 #include *i function.ahk
+#include *i setting.ahk
 ; #include *i deactivation.ahk
 
 ;-----------------基本動作系-----------------
