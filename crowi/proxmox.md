@@ -243,3 +243,5 @@ df -k
 に
 /etc/backup/lvdatabase /mnt/backup ext3 defaults 0 0
 と追記
+
+rebootしてマウントできてればOKです
