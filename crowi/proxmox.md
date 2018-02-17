@@ -145,7 +145,7 @@ Partiton number (1-4, default 1): 1
 
 Point
 物理パーティションは構造上4つまでしか分けることができません
-４つ以上分ける際は一旦物理で４つに割ってからさらに論理で分割するようにしましょう。
+４つ以上分ける際は一旦物理で割ってからさらに論理で分割するようにしましょう。
 
 
 
@@ -161,7 +161,85 @@ Point
 ここは終了セクターの他にもデーターサイズで指定することも可能です
 
 
-
 Created a new partition 1 of type 'Linux' and of size 100 GiB.
 
 と成功のメッセージが出ればパーティション作成できてます。
+
+Point
+確認したい場合はcommand: の状態にて
+i コマンドを使ってみましょう
+以下のように確認することができます
+図
+
+次にパーティションをLVM形式に変換します。
+Command (m for help):t
+を実行すると
+
+Selected partition 1
+ここでは先程フォーマットしたパーティションを
+
+Partition type (type L to list all types): 8e
+ここではLinux LVMを表す 8eを
+
+Point
+１６進数２桁によって表しているパーティションタイプですがここで"L"と打ち込むと変更できる一覧を確認することができます。
+ぜひ確認してみましょう
+
+成功すれば
+Changed type of partition 'Linux' to 'Linux LVM'となります。
+
+確認する場合
+Command (m for help): p
+にて確認
+
+ここまでで以下のようになっています
+図
+
+これにてFdiskによるパーティション操作は終了なので
+Command (help for m): w
+にて終了します。
+図
+
+
+LVMを設定していきます
+論理ボリュームグループを作成
+
+今回はBackupという名前で作成しています
+vgcreate backup /dev/sdb1
+
+作成されているか確認
+vgdisplay -v backup
+図
+
+LVMを作成
+今回読み間違えミスしてしまいました
+lvdatabaseも任意の名前にできます
+Backupフォルダの中にlvdatabaseスペースを作るよ！って意味になりますね。
+（ちゃんと読もう・・・）
+lvcreate -L 99.996G -n lvdatabase backup
+図
+
+Point
+100GBすべては選択できません4m取られているので今回4mを引いた99.996Gで行ってます
+
+フォーマットします
+mkfs.ext3 /dev/backup/lvdatabase
+
+lvdisplay
+図
+
+最後にマウントします
+mkdir -p /mnt/backup
+マウント用のフォルダを作成します
+
+mount /dev/backup/lvdatabase
+
+df -k
+図
+
+
+最後に自動マウントできるようにします
+/etc/fstab
+に
+/etc/backup/lvdatabase /mnt/backup ext3 defaults 0 0
+と追記
