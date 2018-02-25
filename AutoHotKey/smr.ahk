@@ -19,6 +19,10 @@ vk1Dsc07B & F5::Reload
 ;-----------------基本動作系-----------------
 ;変換をEnterに
 vk1Csc079::Enter
+;settingから変換キーを抜く
+
+;無変換9で-に
+Vk1Dsc07B & 9::Send, {-}
 
 ;カタカナ+ひらがなでBS
 vkF2sc070::BS
@@ -68,3 +72,11 @@ vk1Dsc07B & c::Send, {Blind}{Volume_Mute}
 vk1Dsc07B & a::Send, {Blind}{Media_Prev}
 vk1Dsc07B & d::Send, {Blind}{Media_Next}
 vk1Dsc07B & s::Send, {Blind}{Media_Play_Pause}
+
+;---------------ファンクションキー------------
+;F7(主にカタカナにするのに利用)
+vk1Dsc07B & 7::send, {Blind}{F7}
+;F10(主に英語に変換する際に使用)
+vk1Dsc07B & 0::Send, {Blind}{F10}
+;F6(主にひらがなに変換する際に使用)
+vk1Dsc07B & 6::Send, {Blind}{F6}
