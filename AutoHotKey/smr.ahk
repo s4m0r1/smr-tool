@@ -8,7 +8,7 @@ Blindをいれることにより装飾キーとの同時押しを有効にする
 コロン:vkBAsc028 セミコロン:vkBBsc027 カンマ:vkBCsc033 バックスラッシュ:vkE2sc073
 */
 
-;---------------AutoHotKey系---------------
+;---------------AutoHotKey系----------------
 ;AutoHotKeyの再起動
 vk1Dsc07B & F5::Reload
 ;ファイルの読み込み
