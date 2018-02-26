@@ -80,3 +80,8 @@ vk1Dsc07B & 7::send, {Blind}{F7}
 vk1Dsc07B & 0::Send, {Blind}{F10}
 ;F6(主にひらがなに変換する際に使用)
 vk1Dsc07B & 6::Send, {Blind}{F6}
+;F5(主にブラウザの再読込に使用)
+vk1Dsc07B & 5::Send, {Blind}{F5}
+
+;--------------------ESC--------------------
+vk1Dsc07B & p::Send, {Blind}{Esc}
