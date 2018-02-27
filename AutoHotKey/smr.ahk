@@ -22,7 +22,7 @@ vk1Csc079::Enter
 ;settingから変換キーを抜く
 
 ;無変換9で-に
-Vk1Dsc07B & 9::Send, {-}
+vk1Dsc07B & 9::Send, {-}
 
 ;カタカナ+ひらがなでBS
 vkF2sc070::BS
@@ -32,6 +32,15 @@ vk1Dsc07B & vk1Csc079::Send, {vkF3sc029}
 
 ;無変換+SpaceでEsc
 vk1Dsc07B & Space::Send, {Esc}
+
+;無変換+tでタブ移動
+vk1Dsc07B & t::
+if GetKeyState("Shift", "P") || GetKeyState("Ctrl", "P") {
+  Send, ^{PgUp}
+} else {
+  Send, ^{PgDn}
+}
+return
 
 ;-----------------入力動作系-----------------
 ;無変換+1でs4m0r1
@@ -48,9 +57,11 @@ vk1Dsc07B & j::Send, {Blind}{Down}
 vk1Dsc07B & k::Send, {Blind}{Up}
 vk1Dsc07B & l::Send, {Blind}{Right}
 
-;無変換+nでHome .でEnd
-vk1Dsc07B & n::Send, {Blind}{Home}
-vk1Dsc07B & .::Send, {Blind}{End}
+;無変換+uでHome oでEnd yでPgUp nでPgDn
+vk1Dsc07B & u::Send, {Blind}{Home}
+vk1Dsc07B & o::Send, {Blind}{End}
+vk1Dsc07B & y::Send, {Blind}{PgUp}
+vk1Dsc07B & n::Send, {Blind}{PgDn}
 
 ;------------------マウス系------------------
 ;無変換+fで左クリック
