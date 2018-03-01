@@ -98,7 +98,7 @@ vk1Dsc07B & 5::Send, {Blind}{F5}
 vk1Dsc07B & p::Send, {Blind}{Esc}
 
 ;----------------program---------------
-;変換 +,で１行コピペ
+;変換+,で１行コピペ
 
 vk1Dsc07B & ,::
 if GetKeyState("Shift", "P") {
@@ -108,4 +108,13 @@ if GetKeyState("Shift", "P") {
 } else {
 	Send, {End}+{Home}^{c}
 }
+return
+
+;とりま仮追加無変換+8で./a.out
+vk1Dsc07B & 8::
+Send, {Enter}
+Sleep, 500
+SendInput, ./a.out{Slide Up}
+Sleep, 500
+Send, {Enter}
 return
