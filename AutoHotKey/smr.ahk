@@ -98,6 +98,8 @@ vk1Dsc07B & 5::Send, {Blind}{F5}
 vk1Dsc07B & p::Send, {Blind}{Esc}
 
 ;----------------program---------------
+;変換 +,で１行コピペ
+
 vk1Dsc07B & ,::
 if GetKeyState("Shift", "P") {
 	Send, {End}+{Home}^{x}
