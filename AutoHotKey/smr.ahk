@@ -96,3 +96,14 @@ vk1Dsc07B & 5::Send, {Blind}{F5}
 
 ;--------------------ESC--------------------
 vk1Dsc07B & p::Send, {Blind}{Esc}
+
+;----------------program---------------
+vk1Dsc07B & ,::
+if GetKeyState("Shift", "P") {
+	Send, {End}+{Home}^{x}
+} else if GetKeyState("Ctrl", "P") {
+	Send, {End}+{Home}
+} else {
+	Send, {End}+{Home}^{c}
+}
+return
