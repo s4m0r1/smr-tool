@@ -62,7 +62,7 @@
 ;~vk1Csc079::return
 ~Space::return
 ~Enter::return
-~BS::return
+;~BS::return
 ~Tab::return
 ~LCtrl::return
 ~RCtrl::return
