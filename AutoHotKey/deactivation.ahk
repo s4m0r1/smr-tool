@@ -22,3 +22,19 @@ if GetKeyState("m",  "P") {
 	Send, {Blind}{WheelUp}
 }
 return
+
+無変換+1でs4m0r1
+vk1Dsc07B & 1::
+ime := IME_GET()
+IME_OFF()
+Print("s4m0r1")
+IME_RETURN(ime)
+return
+
+vk1Dsc07B & 8::
+Send, {Enter}
+Sleep, 500
+SendInput, ./a.out{Slide Up}
+Sleep, 500
+Send, {Enter}
+return

@@ -21,11 +21,14 @@ vk1Dsc07B & F5::Reload
 vk1Csc079::Enter
 ;settingから変換キーを抜く
 
-;無変換9で-に
-vk1Dsc07B & 9::Send, {-}
+; ;無変換9で-に
+; vk1Dsc07B & 9::Send, {-}
 
 ;カタカナ+ひらがなでBS
 vkF2sc070::BS
+
+;BackSpaceを~BS::return
+BS::Del
 
 ;無変換変換で半角全角
 vk1Dsc07B & vk1Csc079::Send, {vkF3sc029}
@@ -42,14 +45,11 @@ if GetKeyState("Shift", "P") || GetKeyState("Ctrl", "P") {
 }
 return
 
+;他の人が使っても大丈夫なようにする
+Ins & del::Suspend, Toggle
+
 ;-----------------入力動作系-----------------
-;無変換+1でs4m0r1
-vk1Dsc07B & 1::
-ime := IME_GET()
-IME_OFF()
-Print("s4m0r1")
-IME_RETURN(ime)
-return
+;
 
 ;無変換+hjklでvimのようなカーソル移動(無変換キー使用)
 vk1Dsc07B & h::Send, {Blind}{Left}
@@ -85,14 +85,30 @@ vk1Dsc07B & d::Send, {Blind}{Media_Next}
 vk1Dsc07B & s::Send, {Blind}{Media_Play_Pause}
 
 ;---------------ファンクションキー------------
-;F7(主にカタカナにするのに利用)
-vk1Dsc07B & 7::send, {Blind}{F7}
-;F10(主に英語に変換する際に使用)
-vk1Dsc07B & 0::Send, {Blind}{F10}
-;F6(主にひらがなに変換する際に使用)
-vk1Dsc07B & 6::Send, {Blind}{F6}
+;F1
+vk1Dsc07B & 1::Send, {Blind}{F1}
+;F2
+vk1Dsc07B & 2::Send, {Blind}{F2}
+;F3
+vk1Dsc07B & 3::Send, {Blind}{F3}
+;F4
+vk1Dsc07B & 4::Send, {Blind}{F4}
 ;F5(主にブラウザの再読込に使用)
 vk1Dsc07B & 5::Send, {Blind}{F5}
+;F6(主にひらがなに変換する際に使用)
+vk1Dsc07B & 6::Send, {Blind}{F6}
+;F7(主にカタカナにするのに利用)
+vk1Dsc07B & 7::send, {Blind}{F7}
+;F8
+vk1Dsc07B & 8::Send, {Blind}{F8}
+;F9
+vk1Dsc07B & 9::Send, {Blind}{F9}
+;F10(主に英語に変換する際に使用)
+vk1Dsc07B & 0::Send, {Blind}{F10}
+;F11
+vk1Dsc07B & -::Send, {Blind}{F11}
+;F12
+vk1Dsc07B & ^::Send, {Blind}{F12}
 
 ;--------------------ESC--------------------
 vk1Dsc07B & p::Send, {Blind}{Esc}
@@ -111,10 +127,3 @@ if GetKeyState("Shift", "P") {
 return
 
 ;とりま仮追加無変換+8で./a.out
-vk1Dsc07B & 8::
-Send, {Enter}
-Sleep, 500
-SendInput, ./a.out{Slide Up}
-Sleep, 500
-Send, {Enter}
-return
