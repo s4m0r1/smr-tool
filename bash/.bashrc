@@ -13,10 +13,11 @@ function parse_git_branch {
 
 
 #alias
-alias ls='ls -la --color=auto'
+alias ls='ls -lah --color=auto'
 alias ll='ls'
 alias sc='screenfetch -t'
-
+alias vim='nvim'
+alias vi='nvim'
 
 #PATH
 export PATH=$HOME/.local/bin:$PATH
