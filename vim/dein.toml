@@ -1,0 +1,11 @@
+# main
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+
+
+# syntax
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
