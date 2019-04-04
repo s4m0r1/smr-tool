@@ -56,12 +56,12 @@
 ~]::return
 ~-::return
 ~^::return
-~vkBAsc028::return
-~vkBBsc027::return
-~vkE2sc073::return
-;~vk1Csc079::return
+~sc028::return
+~sc027::return
+~sc073::return
+~sc079::return
 ~Space::return
-~Enter::return
+;~Enter::return
 ;~BS::return
 ~Tab::return
 ~LCtrl::return
