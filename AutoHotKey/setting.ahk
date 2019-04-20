@@ -59,10 +59,10 @@
 ~sc028::return
 ~sc027::return
 ~sc073::return
-~sc079::return
+;~sc079::return
 ~Space::return
-;~Enter::return
-;~BS::return
+~Enter::return
+~BS::return
 ~Tab::return
 ~LCtrl::return
 ~RCtrl::return
