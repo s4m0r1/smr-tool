@@ -1,4 +1,4 @@
-;現在使用して居ないショートカットです。
+;現在使用していないショートカットです。
 
 ;無変換+mでスクロールアップ , でスクロールダウン
 ;Shift+無変換+mで左にチルト , で右にチルト
@@ -13,6 +13,7 @@ if GetKeyState(", ",  "P") {
 	Send, {Blind}{WheelDown}
 }
 return
+
 sc07B & ,::
 if GetKeyState("m",  "P") {
 	Send, ^{0}

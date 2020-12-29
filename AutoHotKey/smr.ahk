@@ -1,5 +1,4 @@
 /* AutoHotKey
-以前利用していたsmilceさんのAutoHotKeyがめっちゃ壊れるんで必要なものだけ入れて再構築してます。
 CapsLockはLCtrlとして使用して下さい(Keyawapなどでバイナリ値を変える)
 Blindをいれることにより装飾キーとの同時押しを有効にする
 ～ 仮想キーコード一覧 ～
@@ -48,9 +47,13 @@ return
 ;他の人が使っても大丈夫なようにする
 Ins & del::Suspend, Toggle
 
-;-----------------入力動作系-----------------
-;
+;----------------Explorer--------------
+;Ctrl+U,Oでエクスプローラーの移動を有効にする
+LCtrl & u::Send, ^{f}{Tab}
+LCtrl & o::Send, ^{f}{Tab 2}
 
+
+;-----------------入力動作系-----------------
 ;無変換+hjklでvimのようなカーソル移動(無変換キー使用)
 sc07B & h::Send, {Blind}{Left}
 sc07B & j::Send, {Blind}{Down}
@@ -125,5 +128,3 @@ if GetKeyState("Shift", "P") {
 	Send, {End}+{Home}^{c}
 }
 return
-
-;とりま仮追加無変換+8で./a.out
